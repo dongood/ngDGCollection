@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+<head>
+    <title></title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script src="lib/jquery-1.9.1.min.js"></script>
+    <script type="text/javascript" src="lib/angular.min.js"></script>
+
+    <link rel="stylesheet" href="lib/bootstrap/bootstrap.min.css">
+    <script src="lib/bootstrap/bootstrap.min.js"></script>
+
+    <style type="text/css">
+        .container-liquid {
+            padding: 0 15px;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+<body ng-controller="defaultController">
+<div class="container">
+    <gravatar email="chuckjones@gmail.com" size="200" d-option="mm" rating="pg"></gravatar>
+    <gravatar email="chuckjones@gmail.com" size="200" d-option="retro" force="true"></gravatar>
+</div>
+
+
+<script type="text/javascript" src="defaultController.js"></script>
+<script type="text/javascript" src="js/ngGravatar.js"></script>
+</body>
+</html>
