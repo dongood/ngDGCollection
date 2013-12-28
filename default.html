@@ -5,11 +5,17 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <script src="lib/jquery-1.9.1.min.js"></script>
-    <script type="text/javascript" src="lib/angular.min.js"></script>
+    <script type="text/javascript" src="lib/jquery-1.9.1.min.js"></script>
 
-    <link rel="stylesheet" href="lib/bootstrap/bootstrap.min.css">
-    <script src="lib/bootstrap/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="lib/bootstrap/css/bootstrap.min.css">
+    <script src="lib/bootstrap/js/bootstrap.min.js"></script>
+
+    <link rel="stylesheet" href="lib/bootstrap-datepicker/css/datepicker.css"/>
+    <script type="text/javascript" src="lib/bootstrap-datepicker/js/bootstrap-datepicker.js"></script>
+
+    <!-- highlight.js, used by angular-highlightjs.min.js -->
+    <link rel="stylesheet" href="lib/highlight/styles/zenburn.css"/>
+    <script type="text/javascript" src="lib/highlight/highlight.pack.js"></script>
 
     <style type="text/css">
         .container-liquid {
@@ -20,11 +26,43 @@
 </head>
 <body ng-controller="defaultController">
 <div class="container">
-    <gravatar email="chuckjones@gmail.com" size="200" d-option="mm" rating="pg"></gravatar>
-    <gravatar email="chuckjones@gmail.com" size="200" d-option="retro" force="true"></gravatar>
+    <h1>ngGravatar</h1>
+    <div class="row">
+        <div class="col-xs-4">
+            <gravatar email="chuckjones@gmail.com" size="100" d-option="mm" rating="pg"></gravatar>
+            <div gravatar email="chuckjones@gmail.com" size="100" d-option="retro" force="true"></div>
+        </div>
+        <div class="col-xs-8">
+            <div hljs>
+<gravatar email="chuckjones@gmail.com" size="100" d-option="mm" rating="pg"></gravatar>
+<div gravatar email="chuckjones@gmail.com" size="100" d-option="retro" force="true"></div></div>
+        </div>
+    </div>
+    <h1>ngDatePicker</h1>
+    <div class="row">
+        <div class="col-xs-4">
+
+            <div id="testDate" class="input-group date" data-date="12-02-2012" data-date-format="mm-dd-yyyy">
+                <input type="text" class="form-control" value="12-02-2012">
+                <span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span></span>
+            </div>
+            <script type="text/javascript">
+                $('#testDate').datepicker();
+            </script>
+
+            <div class="input-append date" id="dp3" data-date="12-02-2012" data-date-format="dd-mm-yyyy">
+                <input class="span2" size="16" type="text" value="12-02-2012">
+                <span class="add-on"><i class="icon-th"></i></span>
+            </div>
+
+
+        </div>
+        <div class="col-xs-8"></div>
+    </div>
 </div>
 
-
+<script type="text/javascript" src="lib/angular.min.js"></script>
+<script type="text/javascript" src="lib/highlight/angular-highlightjs.min.js"></script>
 <script type="text/javascript" src="defaultController.js"></script>
 <script type="text/javascript" src="js/ngGravatar.js"></script>
 </body>
