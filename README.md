@@ -22,7 +22,7 @@ Content Cell | Content Cell  | Content Cell
 Attr | Description
 ---- | -----------
 **email** | *Required* Gravatar's email address
-** size** | *Optional* (1-1024) Image size. Defaults to 80px.
+**size** | *Optional* (1-1024) Image size. Defaults to 80px.
 **d-option** | *Optional* Image to display when no gravatar exists. Default's to Gravatar icon.  See below for info.
 **force** | *optional* (true/false) Force the d-option to be displayed regardless.
 
